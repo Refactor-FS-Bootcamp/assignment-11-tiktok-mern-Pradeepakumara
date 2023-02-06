@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+}
+
+/* App Section */
+
+.app {
+    padding: 10px;
+    height: 100vh;
+    background-color: black;
+    display: grid;
+    place-items: center;
+}
+
+.app-videos{
+    position: relative;
+    height: 650px;
+    border-radius: 20px;
+    overflow: scroll;
+    width: 70%;
+    max-width: 400px;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    box-shadow: 0px 0px 5px white;
+}
+
+.app-videos::-webkit-scrollbar{
+    display: none;
+    width: 0;
+    
+}
+
+/* ------------------------------------------------------- */
+
+/* Video Section */
+.video{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.video-player{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+/* Video Footer Section */
+
+.video-footer{
+    position: relative;
+    color: white;
+    bottom: 150px;
+    margin-left: 40px;
+    display: flex;
+}
+
+.video-footer-text{
+    flex: 1;
+}
+
+.video-footer-text h3{
+    padding-bottom: 20px;
+}
+
+.video-footer-text p{
+    padding-bottom: 20px;
+}
+
+.video-footer-ticker > .ticker{
+    height: fit-content;
+    margin-left: 30px;
+    width: 60%;
+}
+
+.video-footer-icon{
+    position: absolute;
+}
+
+.video-footer-record{
+    animation: spinTheRecord infinite 5s linear;
+    height: 50px;
+    filter: invert(1);
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    border-radius: 50%;
+}
+ @keyframes  spinTheRecord {
+    from {
+        transform: rotate(0deg);
+    }    
+    to{
+        transform: rotate(360deg);
+    }
+ }
+
+
+ /* Video Sidebar Section */
+
+ .video-sidebar{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: white;
+ }
+
+ .video-sidebar-button{
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+ }
